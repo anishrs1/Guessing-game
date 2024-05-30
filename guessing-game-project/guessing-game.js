@@ -3,20 +3,23 @@
 let secretNumber = 10;
 
 function checkGuess(num){
-    if(num>secretNumber){
+    let number = Number(num);
+
+    if(number>secretNumber){
         console.log("Too high.");
         return false;
     }
-    if(num<secretNumber){
+    if(number<secretNumber){
         console.log("Too low.");
         return false;
     }
-    if(num === secretNumber){
+    if(number === secretNumber){
         console.log("Correct!");
         return true;
     }
 }
 
-console.log(checkGuess(42));
-console.log(checkGuess(10));
-console.log(checkGuess(5));
+//Test calls for checkGuess
+// console.log(checkGuess('42'));
+// console.log(checkGuess('10'));
+// console.log(checkGuess('5'));
