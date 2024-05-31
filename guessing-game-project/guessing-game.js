@@ -7,7 +7,7 @@ const rl = readline.createInterface({
     output: process.stdout,
   });
 
-let secretNumber = 10;
+let secretNumber = Math.floor(Math.random() * 101);//random number between 0 and 100
 
 function checkGuess(num) {
     let number = Number(num);
@@ -27,6 +27,7 @@ function checkGuess(num) {
 }
 
 function askGuess() {
+    
     rl.question('Enter a guess: ', (answer) => {
         let correct = checkGuess(answer); //invokes checkGuess function
         if (!correct) {
@@ -44,4 +45,5 @@ function askGuess() {
 // console.log(checkGuess('5'));
 
 //Testing askGuess/start the game (phase1)
+console.log("I'm thinking of a number between 0 and 100...")
 askGuess();
